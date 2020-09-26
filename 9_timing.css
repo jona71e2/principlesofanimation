@@ -1,0 +1,31 @@
+.linear {
+  animation: move 1s linear 1 forwards;
+}
+.ease {
+  animation: move 1s ease 1 forwards;
+}
+.ease-in-out {
+  animation: move 1s ease-in-out 1 forwards;
+}
+.ease-in {
+  animation: move 1s ease-in 1 forwards;
+}
+.ease-out {
+  animation: move 1s ease-out 1 forwards;
+}
+.steps {
+  animation: move 1s steps(10) 1 forwards;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(45vw);
+  }
+}
+
+#stage {
+  overflow: scroll;
+}

@@ -1,13 +1,15 @@
 .bounce {
-  animation: bounce 2s infinite ease-in-out;
+  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
   0% {
     transform: translateY(0);
+    animation-timing-function: ease-in;
   }
   50% {
     transform: translateY(var(--bottom));
+    animation-timing-function: ease-out;
   }
   100% {
     transform: translateY(0);
@@ -21,25 +23,23 @@
 
 @keyframes squash {
   0% {
-    transform: scaleY(1);
-    animation-timing-function: ease-in;
+    transform: scale(1, 1);
   }
   40% {
-    transform: scaleX(1);
+    transform: scale(1, 1.5);
   }
-  49% {
-    transform: scaleX(1.1);
+  47% {
+    transform: scale(1, 1.1);
   }
 
   50% {
-    transform: scaleY(0.8), scaleX(1.5);
-    animation-timing-function: ease-out;
+    transform: scale(1.6, 1);
   }
   60% {
-    transform: scaleX(1);
+    transform: scale(1, 1.5);
   }
 
   100% {
-    transform: scaleY(1);
+    transform: scale(1, 1);
   }
 }
